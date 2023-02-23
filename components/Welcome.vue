@@ -8,24 +8,30 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 
-// reactive state
-const intro = ref("Salut les kids")
+export default {
+  setup(){
+    // reactive state
+    const intro = ref("Salut les kids")
+    
+    // functions that mutate state and trigger updates
+    function erase() {
+      intro.value = "erased";
+    }
+    
+    return {
+      erase, intro
+    }
+    
+  },
 
-// functions that mutate state and trigger updates
-function erase() {
-  intro.value = "erased";
+  // lifecycle hooks
+  mounted() {
+    console.log(`The initial intro is ${intro.value}.`)
+  }
+
 }
-
-return {
-  erase, intro
-}
-
-// lifecycle hooks
-onMounted(() => {
-  console.log(`The initial intro is ${intro.value}.`)
-})
 </script>
 
 
