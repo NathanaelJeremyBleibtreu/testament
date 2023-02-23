@@ -1,7 +1,7 @@
 <template>
   <div>
     <ClientOnly>
-      <Welcome />
+      <WelcomeToApp />
     </ClientOnly>
   </div>
 </template>
