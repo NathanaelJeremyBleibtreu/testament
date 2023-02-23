@@ -1,5 +1,7 @@
 <template>
   <div>
-    <Welcome />
+    <ClientOnly>
+      <Welcome />
+    </ClientOnly>
   </div>
 </template>
