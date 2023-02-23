@@ -10,28 +10,13 @@
 <script setup>
 import { ref } from 'vue'
 
-export default {
-  setup(){
-    // reactive state
-    const intro = ref("Salut les kids")
-    
-    // functions that mutate state and trigger updates
-    function erase() {
-      intro.value = "erased";
-    }
-    
-    return {
-      erase, intro
-    }
-    
-  },
-
-  // lifecycle hooks
-  mounted() {
-    console.log(`The initial intro is ${intro.value}.`)
+  const intro = ref("Salut les kids")
+  
+  // functions that mutate state and trigger updates
+  const erase = () => {
+    intro.value = "erased";
   }
 
-}
 </script>
 
 
