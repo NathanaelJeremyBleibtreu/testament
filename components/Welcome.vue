@@ -1,8 +1,10 @@
 <template>
-  <h1>TESTAMENT</h1>
-  <h2>An interactive story</h2>
-  <p>{{intro}}</p>
-  <button @click="erase()">Effacer</button>
+  <client-only>
+    <h1>TESTAMENT</h1>
+    <h2>An interactive story</h2>
+    <p>{{intro}}</p>
+    <button @click="erase()">Effacer</button>
+  </client-only>
 </template>
 
 <script setup>
@@ -14,6 +16,10 @@ const intro = ref("Salut les kids")
 // functions that mutate state and trigger updates
 function erase() {
   intro.value = "erased";
+}
+
+return {
+  erase, intro
 }
 
 // lifecycle hooks
