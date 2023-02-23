@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>YOYOYO</h1>
-    <NuxtWelcome />
+    <h1>TESTAMENT</h1>
+    <Welcome />
   </div>
 </template>
